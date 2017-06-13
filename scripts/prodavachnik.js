@@ -2,6 +2,12 @@ function startApp() {
     showHideMenuLinks();
     showHomeView();
 
+
+    if (sessionStorage.getItem('authToken') !== null) { 
+        let username = sessionStorage.getItem('username'); 
+        $('#loggedInUser').text("Welcome, " + username + "!"); 
+    }
+
     // Bind the navigation menu links
     $("#linkHome").click(showHomeView);
     $("#linkLogin").click(showLoginView);
@@ -31,6 +37,7 @@ function startApp() {
         showError(errorMsg);
     }
 
+
     // Bind the form submit buttons
     $("#buttonLoginUser").click(loginUser);
     $("#buttonRegisterUser").click(registerUser);
@@ -45,7 +52,6 @@ function startApp() {
         ajaxStart: function() { $("#loadingBox").show() },
         ajaxStop: function() { $("#loadingBox").hide() }
     });
-
 
     const kinveyBaseUrl = "https://mock.api.com/";
     const kinveyAppKey = "kid_rk";
@@ -65,12 +71,14 @@ function startApp() {
             $("#linkRegister").show();
             $("#linkListAds").hide();
             $("#linkLogout").hide();
+            $("#loggedInUser").hide();
         } else {
             // We have logged in user
             $("#linkLogin").hide();
             $("#linkRegister").hide();
             $("#linkListAds").show();
             $("#linkLogout").show();
+            $("#loggedInUser").show();
         }
     }
 
@@ -122,6 +130,9 @@ function startApp() {
         sessionStorage.setItem('authToken', userAuth);
         let userId = userInfo._id;
         sessionStorage.setItem('userId', userId);
+        let username = userInfo.username; 
+        sessionStorage.setItem('username', username); 
+        $('#loggedInUser').text("Welcome, " + username + "!");
     }
 
     // user/register
