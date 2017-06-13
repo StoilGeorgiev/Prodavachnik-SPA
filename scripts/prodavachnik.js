@@ -37,10 +37,7 @@ function startApp() {
         showError(errorMsg);
     }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> e374d0aeb806136351b1b55a71a4129fcfc22b70
     // Bind the form submit buttons
     $("#buttonLoginUser").click(loginUser);
     $("#buttonRegisterUser").click(registerUser);
@@ -56,10 +53,6 @@ function startApp() {
         ajaxStop: function() { $("#loadingBox").hide() }
     });
 
-<<<<<<< HEAD
-=======
-
->>>>>>> e374d0aeb806136351b1b55a71a4129fcfc22b70
     const kinveyBaseUrl = "https://mock.api.com/";
     const kinveyAppKey = "kid_rk";
     const kinveyAppSecret = "736804a668";
