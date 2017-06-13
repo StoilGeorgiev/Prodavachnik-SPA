@@ -262,7 +262,7 @@
       <option name="presentableId" value="Default" />
       <updated>1497351805057</updated>
       <workItem from="1497351806315" duration="1148000" />
-      <workItem from="1497353774451" duration="303000" />
+      <workItem from="1497353774451" duration="311000" />
     </task>
     <task id="LOCAL-00001" summary="front-end add click on buttons">
       <created>1497354174624</created>
@@ -271,11 +271,18 @@
       <option name="project" value="LOCAL" />
       <updated>1497354174624</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="front-end add click on buttons">
+      <created>1497354204278</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1497354204278</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1451000" />
+    <option name="totallyTimeSpent" value="1459000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="697" height="735" extended-state="0" />
